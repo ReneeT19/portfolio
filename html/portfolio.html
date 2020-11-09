@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+    <style>
+    .container-fluid{
+      text-align: center;
+      padding-left: 100px;
+      padding-right:0px;
+    }
+    .jumbotron{
+        background-color: #FFF0F5;
+    }
+
+.sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #E6E6FA;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:  #818181;
+}
+
+@media screen and (max-height: 350px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #FFF0F5;
+   color: grey;
+   text-align: center;
+}
+.btn btn-secondary btn-lg{
+    margin-right: 100px;;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="jumbotron">
+              <h2>Hi, I am Renee Thomsen</h2></div>
+
+        <div class="sidenav">
+        <a href="https://www.linkedin.com/in/chuhan-thomsen/">Linked-in</a>
+        <a href="https://github.com/ReneeT19">Github</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="container">
+            <input class="form-control" id="listSearch" type="text" placeholder="Type something to search list items">
+            <br>
+            <ul class="list-group" id="myList">
+              <li class="list-group-item">
+                <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Library Management System 
+                        </button>
+                      </h5>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                          Developed a “Library Management System” featuring a separate secure login for patrons and librarians and an ”Employee Management System” featuring CRUD capabilities using Java, JSP, MySQL, Javascript, HTML, and CSS (Bootstrap).
+                          <a href="https://github.com/ReneeT19">Github</a>
+                      </div>
+                    </div>
+                  </div></li>
+              <li class="list-group-item">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          UdaciFitness Mobile App
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                          Successfully completed a React Native Fitness Mobile App that allows the user to log exercise information on both iOS and Adroid.
+                          <a href="https://github.com/ReneeT19">Github</a>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+              <li class="list-group-item"><div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Product Catalog Site
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                      Built a Maven Project “Product Catalog Site” featuring CRUD functionalities using Java, JSP, MySQL, JavaScript, HTML, and CSS. Conducted a Dynamic Web Project “Zoo and JSTL” displaying animals and exhibits using Java, JSP, MySQL, and Servlet.
+                      <a href="https://github.com/ReneeT19">Github</a>
+                  </div>
+                </div>
+              </div></li>
+              <!-- <li class="list-group-item">Fourth item</li> -->
+            </ul>
+          </div>
+
+          <script>
+              $(document).ready(function(){
+            $("#listSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myList li").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            });
+          </script>
+
+        <!-- <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Library Management System 
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Developed a “Library Management System” featuring a separate secure login for patrons and librarians and an ”Employee Management System” featuring CRUD capabilities using Java, JSP, MySQL, Javascript, HTML, and CSS (Bootstrap).
+                    <a href="https://github.com/ReneeT19">Github</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    UdaciFitness Mobile App
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Successfully completed a React Native Fitness Mobile App that allows the user to log exercise information on both iOS and Adroid.
+                    <a href="https://github.com/ReneeT19">Github</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Product Catalog Site
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Built a Maven Project “Product Catalog Site” featuring CRUD functionalities using Java, JSP, MySQL, JavaScript, HTML, and CSS. Conducted a Dynamic Web Project “Zoo and JSTL” displaying animals and exhibits using Java, JSP, MySQL, and Servlet.
+                    <a href="https://github.com/ReneeT19">Github</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="footer">
+            <p>Chuhan "Renee" Thomsen © 2020</p>
+          </div>
+</body>
+</html>

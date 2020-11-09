@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Contact</title>
+    <style>
+    .container-fluid{
+      text-align: center;
+      padding-left: 100px;
+      padding-right:0px;
+    }
+    .jumbotron{
+        background-color: #FFF0F5;
+    }
+
+.sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #E6E6FA;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:  #818181;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #FFF0F5;
+   color: grey;
+   text-align: center;
+}
+.btn btn-secondary btn-lg{
+    margin-right: 100px;;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h2>Hi, I am Renee Thomsen</h2></div>
+
+        <!-- <div class="sidenav">
+        <a href="https://www.linkedin.com/in/chuhan-thomsen/">Linked-in</a>
+        <a href="https://github.com/ReneeT19">Github</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        </div> -->
+
+        <section class="resume-section p-4 p-lg-5 text-center" id="contact">
+            <div class="my-auto">
+                <h2 class="mb-4">< Contact Information ></h2>
+    
+                <ul class="fa-ul mb-4 ml-0">
+                <li id="mail-address">
+    <!--               Replace with your email address -->
+                    <i class="fas fa-envelope-open mr-2 contact-icons"></i
+                    >rcthomsen19@gmail.com</a
+                    >
+                </li>
+                <li>
+                    <i class="fas fa-mobile-alt mr-2 contact-icons"></i>+1 540 998 7706
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt mr-2 contact-icons"></i>Raleigh, NC
+                </li>
+                </ul>
+    
+                <p>
+                ...or leave your message below and I will be back to you as soon as
+                possible.
+                </p>
+    
+            <form
+            class="contact-form d-flex flex-column align-items-center"
+            action=""
+            method="POST"
+            >
+            <div class="form-group w-75">
+                <input
+                type="name"
+                class="form-control"
+                placeholder="Name"
+                name="name"
+                required
+                />
+            </div>
+            <div class="form-group w-75">
+                <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                name="email"
+                required
+                />
+            </div>
+
+            <div class="form-group w-75">
+                <textarea
+                class="form-control"
+                type="text"
+                placeholder="Message"
+                rows="7"
+                name="message"
+                required
+                ></textarea>
+            </div>
+        </form>
+            <button type="submit" class="btn btn-submit btn-info w-75" onclick="counter(); myFunction(); myFunction2(); document.getElementById('date_time_button').innerHTML = Date()">Submit</button>
+            <p id="date_time_button"></p>
+           
+
+            <!-- <div id="test1">
+                <p>Name: </p>
+                <p type="email">Email: </p>
+                <button onclick="deleteButton()">Delete</button>
+
+            </div>
+            <script>
+                function deleteButton() {
+                    var del = document.getElementById("test1");
+                    del.remove();
+                }
+            </script> -->
+
+            <!-- make it look like this -->
+            <!--             
+            <div id="test1">
+                <p>Name: </p>
+                <p type="email">Email: </p>
+                <button onclick="deleteButton()">Delete</button>
+            </div>
+            -->
+
+            <!-- don't look like this -->
+            <!--  
+            <button style="text-align: center;">Remove</button>
+            <div style="text-align: center;" id="1">a</div>
+            <button id="1">Remove</button>
+            <div style="text-align: center;"></div>
+            -->
+
+            
+        <div id="out"></div>
+        <script type="text/javascript">
+        let count = 0;
+        const target = document.getElementById("out");
+
+        function counter() {
+            count++;
+            target.textContent = `${count} user(s) submitted the contact form`;
+        }
+        </script>   
+ 
+
+        <script>
+            countUser = 0;
+            function myFunction() {
+                var myDiv = document.createElement("div");
+                countUser++;
+                myDiv.style.textAlign = "center";
+                var name = document.getElementsByName("name")[0].value;
+                myDiv.innerHTML = name;
+                document.body.appendChild(myDiv);
+                myDiv.id = countUser;
+
+                var btn = document.createElement("BUTTON");            
+                btn.innerHTML = "Remove";
+                myDiv.appendChild(btn);
+                onclick = function() {removeButton()};
+
+                var btn2 = document.createElement("BUTTON");            
+                btn2.innerHTML = "Contact";
+                myDiv.appendChild(btn2);
+                }
+        </script>          
+
+         <script>
+            function removeButton() {
+                var btn = document.getElementById(countUser);
+                btn.remove();
+            }
+            function alertButton() {
+                var btn2 = document.getElementById(countUser);
+                alert(btn2);
+            }
+        </script>  
+
+        <script>
+            function myFunction2() {
+            var x = document.createElement("div");
+            x.style.textAlign = "center";
+            var email = document.getElementsByName("email")[0].value;
+            x.innerHTML = email;
+            document.body.appendChild(x);
+            console.log(x);
+            }
+        </script>  
+
+        <script>
+            function myFunction3() {
+              var x = document.createElement("INPUT");
+              x.setAttribute("type", "date");
+              x.setAttribute("value", "2014-02-09");
+              document.body.appendChild(x);
+            }
+
+            </script>   
+
+            <script>
+                    //   var btn = document.createElement("BUTTON"); 
+                    //   btn.style.textAlign = "center";
+                    // //   var name = document.getElementsByName("name")[0].value;
+                    // btn.innerHTML = "Remove";
+                    // document.body.appendChild(btn);
+                    // var btn = document.getElementsByName("name")[0].value;
+                    // btn.remove(); 
+
+                    // <!-- var btn2 = document.createElement("BUTTON");
+                    //   btn2.style.textAlign = "left";
+                    // //   var name = document.getElementsByName("name")[0].value;
+                    // btn.innerHTML = "Alert";
+                    // document.body.appendChild(btn2);
+                    //  btn2 = document.getElementsByName("name")[0].value; -->
+     
+                </script>                   
+                </div>
+                </section>
+                
+                <script
+                defer
+                src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+                integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+                crossorigin="anonymous"
+            ></script>
+
+
+<div class="footer">
+    <p>Chuhan "Renee" Thomsen © 2020</p>
+  </div>
+<!--Section: Contact v.2-->
+</body>
+</html>
