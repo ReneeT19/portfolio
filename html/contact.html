@@ -66,13 +66,13 @@
         <div class="jumbotron">
             <h2>Hi, I am Renee Thomsen</h2></div>
 
-        <!-- <div class="sidenav">
+        <div class="sidenav">
         <a href="https://www.linkedin.com/in/chuhan-thomsen/">Linked-in</a>
         <a href="https://github.com/ReneeT19">Github</a>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="contact.html">Contact</a>
-        </div> -->
+        </div>
 
         <section class="resume-section p-4 p-lg-5 text-center" id="contact">
             <div class="my-auto">
@@ -193,24 +193,29 @@
 
                 var btn = document.createElement("BUTTON");            
                 btn.innerHTML = "Remove";
+                btn.addEventListener("click", removeButton);
+                // btn.onclick = function() {removeButton()};
+                btn.setAttribute("value", countUser);
                 myDiv.appendChild(btn);
-                onclick = function() {removeButton()};
 
                 var btn2 = document.createElement("BUTTON");            
                 btn2.innerHTML = "Contact";
+                btn2.addEventListener("click", alertButton);
+                btn2.setAttribute("value2", countUser);
                 myDiv.appendChild(btn2);
                 }
         </script>          
 
          <script>
             function removeButton() {
-                var btn = document.getElementById(countUser);
+                var btn = document.getElementById(event.target.value);
                 btn.remove();
             }
             function alertButton() {
-                var btn2 = document.getElementById(countUser);
-                alert(btn2);
+                var btn2 = document.getElementById(event.target.value2);
+                alert("Email the contact");
             }
+            
         </script>  
 
         <script>
